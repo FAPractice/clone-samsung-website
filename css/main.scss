@@ -1,0 +1,36 @@
+header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+}
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  header {
+    grid-template-columns: 1fr 1fr;
+  }
+}

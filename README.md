@@ -1,2 +1,3 @@
-# clone-samsung-website
- A clone of Samsung Homepage
+# Samsung Website Clone
+
+A clone of Samsung Homepage
