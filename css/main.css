@@ -1,27 +1,69 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 header {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 1fr;
-      grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr;
+  margin: 1.2rem 1.2rem;
+  gap: 40px;
 }
-
-header ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
+header .branding img {
+  height: 16px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 0.75rem 0.5rem;
+}
+header nav {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  list-style-type: none;
+  width: 100%;
+}
+header nav ul {
+  display: flex;
+}
+header nav li {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+header nav .nav-text {
+  font-family: "Helvetica Neue", "Segoe UI Medium", Tahoma, Geneva, Verdana, sans-serif;
+  margin: auto 0rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.5rem;
+}
+header nav .nav-text:hover {
+  background: black;
+  color: white;
+  border-radius: 999rem;
+}
+header nav .nav-icon {
+  aspect-ratio: 1;
+  width: 40px;
+  height: 40px;
+}
+header nav .nav-icon img,
+header nav .nav-icon svg,
+header nav .nav-icon path {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem;
+  line-height: 0;
+}
+header nav .action-buttons {
+  padding-left: 40px;
+}
+@media screen and (max-width: 1200px) {
+  header {
+    margin: 0.5rem 1rem;
+  }
 }
 
-header li {
-  display: inline-block;
-}
-
-.desktop-only {
-  display: block;
+li {
+  list-style: none;
 }
 
 .mobile-only {
@@ -36,8 +78,6 @@ header li {
     display: block;
   }
   header {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
