@@ -2,6 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Helvetica Neue", "Segoe UI Medium", Tahoma, Geneva, Verdana,
+    sans-serif;
 }
 
 header {
@@ -28,6 +30,7 @@ header {
 
     li {
       width: max-content;
+      cursor: pointer;
     }
 
     .nav-text {
@@ -69,6 +72,97 @@ header {
   }
 }
 
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 360px;
+  background-color: white;
+  padding: 0px 1.5rem;
+  padding-inline-end: 0;
+  box-shadow: 0px 0px 0px 100vmax rgba($color: #000, $alpha: 0.9);
+  overflow: scroll;
+  animation: animateIn 0.3s ease-in;
+
+  .nav-text {
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding: 1rem 0rem;
+    display: flex;
+    gap: 0.25rem;
+    cursor: pointer;
+    animation: animateInUl 0.4s ease-in;
+
+    img,
+    svg,
+    path {
+      width: 1.5rem;
+      height: 1.5rem;
+      line-height: 0;
+    }
+  }
+
+  @keyframes animateIn {
+    0% {
+      box-shadow: 0px 0px 0px 100vmax rgba($color: #000, $alpha: 0);
+      transform: translateX(100%);
+    }
+    100% {
+      box-shadow: 0px 0px 0px 100vmax rgba($color: #000, $alpha: 0.9);
+      transform: none;
+    }
+  }
+
+  @keyframes animateInUl {
+    0% {
+      transform: translateX(5%);
+      opacity: 0;
+    }
+    60% {
+      transform: translateX(5%);
+      opacity: 0;
+    }
+    100% {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  ul {
+    padding: 1.25rem 0px;
+    border-bottom: 1px solid gainsboro;
+  }
+
+  .no-border {
+    border-bottom: none;
+  }
+
+  .no-top-padding {
+    padding-top: 4rem;
+  }
+
+  button {
+    all: unset;
+    aspect-ratio: 1;
+    width: 40px;
+    height: 40px;
+    padding: 0.75rem;
+    float: right;
+    cursor: pointer;
+    img,
+    svg,
+    path {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: 0.5rem;
+      line-height: 0;
+    }
+  }
+}
+
 li {
   list-style: none;
 }
@@ -89,4 +183,8 @@ li {
   header {
     grid-template-columns: 1fr auto;
   }
+}
+
+.visible {
+  display: unset;
 }

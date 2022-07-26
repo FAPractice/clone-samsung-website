@@ -1,10 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Samsung India | Mobile | TV | Home Appliances</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <script src="./index.js" defer></script>
+    <title>Samsung India | Mobile | TV | Home Appliances</title>
   </head>
   <body>
     <header>
@@ -35,11 +37,34 @@
           <li class="nav-icon desktop-only">
             <img src="./res/user.svg" alt="Open Account Page" />
           </li>
-          <li class="nav-icon mobile-only">
+          <li class="nav-icon mobile-only btn-nav-menu">
             <img src="./res/menu.svg" alt="Open Menu" />
           </li>
         </ul>
       </nav>
     </header>
+    <nav class="nav-menu" id="nav-menu">
+      <button class="btn-nav-menu">
+        <img src="./res/close.svg" alt="Open Menu" />
+      </button>
+      <ul class="nav-text-mobile no-top-padding">
+        <li class="nav-text">Mobile</li>
+        <li class="nav-text">TV & AV</li>
+        <li class="nav-text">Home Appliances</li>
+        <li class="nav-text">Laptop & Monitors</li>
+        <li class="nav-text">Displays</li>
+        <li class="nav-text">Offers</li>
+      </ul>
+      <ul class="nav-text-mobile" style="margin-left: auto">
+        <li class="nav-text">Explore</li>
+        <li class="nav-text">Support</li>
+        <li class="nav-text">For Business</li>
+      </ul>
+      <ul class="nav-text-mobile no-border" style="margin-left: auto">
+        <li class="nav-text"><img src="./res/user.svg" /> Log-In/Sign-Up</li>
+        <li class="nav-text">Orders</li>
+        <li class="nav-text">Product Registration</li>
+      </ul>
+    </nav>
   </body>
 </html>
