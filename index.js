@@ -1,6 +1,8 @@
 const navMenu = document.getElementById("nav-menu");
+const body = document.querySelector("body");
 
 const closeAnimationFunction = (duration) => {
+  body.style.overflow = "scroll";
   navMenu.animate(
     [
       {
@@ -15,11 +17,16 @@ const closeAnimationFunction = (duration) => {
     setTimeout(() => navMenu.classList.remove("visible"), duration);
 };
 
+const openAnimationFunction = () => {
+  body.style.overflow = "hidden";
+  navMenu.classList.add("visible");
+};
+
 document.querySelectorAll(".btn-nav-menu").forEach((element) => {
   element.onclick = () => {
     navMenu.classList.contains("visible")
       ? closeAnimationFunction(200)
-      : navMenu.classList.add("visible");
+      : openAnimationFunction();
   };
 });
 

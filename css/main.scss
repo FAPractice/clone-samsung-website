@@ -74,7 +74,7 @@ header {
 
 .nav-menu {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
@@ -187,4 +187,73 @@ li {
 
 .visible {
   display: unset;
+}
+
+footer {
+  display: flex;
+  width: 100vw;
+
+  a {
+    all: unset;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    &:hover {
+      text-decoration: underline;
+      color: blue;
+    }
+  }
+  section {
+    border: 1px solid gainsboro;
+    border-left: none;
+    width: 100%;
+    padding: 0px 1rem;
+    font-size: x-small;
+    h3 {
+      padding: 1rem 0px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      &:last-child {
+        padding-bottom: 1rem;
+      }
+    }
+    &:last-child {
+      padding-right: none;
+    }
+  }
+
+  &.copyright {
+    flex-direction: column;
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 1rem;
+    font-size: x-small;
+    p {
+      margin: 1rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &.links {
+    padding: 1rem;
+    gap: 1rem;
+    font-size: x-small;
+  }
+
+  .seperator {
+    color: gainsboro;
+  }
+
+  .trailing {
+    display: flex;
+    margin-left: auto;
+    gap: 0.25rem;
+    align-items: center;
+    img {
+      width: 1rem;
+      height: 1rem;
+      line-height: 0;
+    }
+  }
 }
