@@ -94,7 +94,7 @@ header {
     display: flex;
     gap: 0.25rem;
     cursor: pointer;
-    animation: animateInUl 0.4s ease-in;
+    animation: animateInUl 0.7s cubic-bezier(0, 0, 0.15, 1);
 
     img,
     svg,
@@ -121,7 +121,7 @@ header {
       transform: translateX(5%);
       opacity: 0;
     }
-    60% {
+    50% {
       transform: translateX(5%);
       opacity: 0;
     }
