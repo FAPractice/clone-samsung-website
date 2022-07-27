@@ -203,12 +203,18 @@ footer {
 }
 footer a {
   all: unset;
+  display: flex;
   cursor: pointer;
   transition: color 0.2s ease;
 }
 footer a:hover {
   text-decoration: underline;
   color: blue;
+}
+footer a img {
+  display: block;
+  width: 0.6rem;
+  margin-left: 0.25rem;
 }
 footer section {
   border: 1px solid gainsboro;

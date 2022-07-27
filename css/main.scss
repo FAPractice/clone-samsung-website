@@ -195,11 +195,17 @@ footer {
 
   a {
     all: unset;
+    display: flex;
     cursor: pointer;
     transition: color 0.2s ease;
     &:hover {
       text-decoration: underline;
       color: blue;
+    }
+    img {
+      display: block;
+      width: 0.6rem;
+      margin-left: 0.25rem;
     }
   }
   section {
