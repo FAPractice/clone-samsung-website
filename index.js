@@ -35,3 +35,16 @@ window.onresize = () => {
     closeAnimationFunction(400);
   }
 };
+
+document.querySelectorAll(".item .text").forEach((e, i) => {
+  e.addEventListener("mouseenter", (e) => {
+    document.querySelectorAll(".item .text").forEach((e, i) => {
+      e.classList.remove("hovered");
+    });
+    e.target.classList.add("hovered");
+
+    const image = document.querySelector(".img-container .img");
+    image.classList.remove(image.classList[1]);
+    image.classList.add(`img-${e.target.classList[1]}`);
+  });
+});
